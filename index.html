@@ -21,35 +21,39 @@
                 <button 
                 onclick=
                 "
+
+                /* Funcion para sumar +1 cada vez que se hace click */
                 cantidad = document.querySelector('.cantidad');
                 cantidadSuma = Number(cantidad.innerHTML)
                 cantidadSuma = cantidadSuma + 1;
                 cantidad.innerHTML = cantidadSuma;
 
+                /* Funcion para aumentar el total en funcion de la cantidad elegida */
                 valorInicial = document.querySelector('.valor-total');
                 valorInicial.innerHTML = precio.innerHTML;
                 valorFinal = valorInicial.innerHTML * cantidadSuma;
                 valorInicial.innerHTML = valorFinal;
-
                 ">+</button>
                 <button 
                 onclick=
                 "
+                /* Funcion para limitar la cantidad a 0 y que no queden cantidades negativas */
                 if (cantidad.innerHTML <= 0) {
                     return;
                 }   else {
 
+                /* Funcion para restar -1 cada vez que se hace click */
                 cantidad = document.querySelector('.cantidad');
                 cantidadResta = Number(cantidad.innerHTML);
                 cantidadResta = cantidadResta - 1;
                 cantidad.innerHTML = cantidadResta;
 
+                /* Funcion para disminuir el total en funcion de la cantidad elegida */
                 valorInicial = document.querySelector('.valor-total');
                 valorInicial.innerHTML = precio.innerHTML;
                 valorFinal = valorFinal - valorInicial.innerHTML;
                 valorInicial.innerHTML = valorFinal;
-
-            }
+                }
                 ">-</button>
               </p>
             </div>
@@ -60,9 +64,6 @@
         <p>Total a pagar: $<span class="valor-total">0</span> </p>
     </div>
 
-    <script src="assets/js/index.js">
-      
-
-    </script>
+    <script src="assets/js/index.js"></script>
 </body>
 </html>
